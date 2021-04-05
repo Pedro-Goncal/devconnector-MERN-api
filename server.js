@@ -40,6 +40,8 @@ app.use(express.json());
 //APIs
 //===================
 
+app.get("/", (req, res) => res.send("Helloooo....Is it me your looking for?"));
+
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postsRoutes);
 app.use("/api/profile", profileRoutes);
