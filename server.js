@@ -40,20 +40,14 @@ app.use(express.json());
 //APIs
 //===================
 
+app.use("/", (req, res) => {
+  res.send("Hellooooo............is it me your looking for");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postsRoutes);
 app.use("/api/profile", profileRoutes);
 app.use("/api/users", usersRoutes);
-
-//Serve static assets in production
-if (process.env.NODE_ENV === "production") {
-  //Set Static folder
-  app.use(express.static("client/build"));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__direname, "client", "build", "index.html"));
-  });
-}
 
 app.listen(PORT, () =>
   console.log(`==>listening on http://localhost:${PORT}<==`)
