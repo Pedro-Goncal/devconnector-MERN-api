@@ -10,7 +10,7 @@
 
 ### Description
 
-Server for  [Dev Connector (Live Version)](https://awesome-franklin-9677f9.netlify.app/). 
+Check out the live version  [Dev Connector](https://awesome-franklin-9677f9.netlify.app/). 
 
 This server is built using Node and Express, and it also includes jsonWebToken for user validation and security, as well as bcrypt for password hashing to garantee user privacy and security. 
 
